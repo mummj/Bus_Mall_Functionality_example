@@ -1,0 +1,40 @@
+body{
+    background-color: darkgrey;
+}
+h1{
+    text-align: center;
+    font-size: xxx-large;
+}
+#instructions{
+    width: 100%;
+}
+h2{
+    text-align: center;
+    width: 200px;
+}
+p{
+    border: 2px dotted #EDEC80;
+    width: 60%;
+    margin: auto;
+    padding:2%;
+    background-color: #4E82A3;
+    color: #EDEC80;
+    font-size: x-large;
+}
+h3{
+    text-align: center;
+    margin-top: 10%;
+}
+img{
+    width: 200px;
+    height:200px;
+}
+#imgDiv{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 2%;
+}
+#titles{
+    display:flex;
+    justify-content: space-evenly;
+}
