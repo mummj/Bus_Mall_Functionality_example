@@ -52,10 +52,13 @@ function getThreeImages(){
   let img1 = Images.allImages[0];
   let img2 = Images.allImages[1];
   let img3 = Images.allImages[2];
-    img1.renderImages(imgContainer1, imgTitle1);
-    img2.renderImages(imgContainer2, imgTitle2);
-    img3.renderImages(imgContainer3, imgTitle3);
+  img1.renderImages(imgContainer1, imgTitle1);
+  img2.renderImages(imgContainer2, imgTitle2);
+  img3.renderImages(imgContainer3, imgTitle3);
 };
+
+
+
 
 // Put array into local storage
 function putArrayInStorage(){
@@ -89,31 +92,30 @@ function removeImages(){
 function handleClick(e){
     let imageClicked = e.target.id;
     if(imageClicked === 'img1' || imageClicked === 'img2' || imageClicked === 'img3'){
-        mainContainer.views++;
         count++;
     }
     if(imageClicked === 'img1'){
-        imgContainer1.clicks++;
+        Images.allImages[0].clicks++;
     }    
     if(imageClicked === 'img2'){
-        imgContainer2.clicks++;
+        Images.allImages[1].clicks++;
     }
     if(imageClicked === 'img3'){
-        imgContainer3.clicks++;
+        Images.allImages[2].clicks++;
     } 
     getThreeImages(); 
-    putArrayInStorage();
     if (count === 5){
         removeImages();
         document.write('<h1>The test is over now</h1>');
-        console.log(localStorage);
+        console.log(Images.allImages);
     }
-    
+    putArrayInStorage();
 }
 
 
 
 mainContainer.addEventListener('click', handleClick);
-// console.log(Images.allImages);  
+console.log(Images);
 getArrayFromStorage();
 getThreeImages();
+
